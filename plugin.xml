@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="hasFilePlugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>hasFilePlugin</name>
+<js-module name="hasFilePlugin" src="www/hasFilePlugin.js">
+<clobbers target="cordova.plugins.hasFilePlugin" />
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="hasFilePlugin"><param name="android-package" value="hasFilePlugin.hasFilePlugin" />
+</feature>
+</config-file>
+<config-file parent="/*" target="AndroidManifest.xml">
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+</config-file>
+<source-file src="src/android/hasFilePlugin.java" target-dir="src/hasFilePlugin/hasFilePlugin" />
+</platform>
+</plugin>
